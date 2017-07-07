@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1499442784">
+  <project timestamp="1499442784">
+    <package name="FormHelper">
+      <file name="/var/www/dima/untitled/app/AbstractFormHelper.php">
+        <class name="AbstractFormHelper" namespace="FormHelper">
+          <metrics methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="10" coveredelements="8"/>
+        </class>
+        <line num="7" type="method" name="set" crap="1" count="0"/>
+        <line num="8" type="method" name="get" crap="1" count="0"/>
+        <line num="10" type="method" name="isCyrillic" crap="1" count="2"/>
+        <line num="12" type="stmt" count="2"/>
+        <line num="15" type="method" name="isLatin" crap="1" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="20" type="method" name="isText" crap="1" count="4"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="25" type="method" name="isInteger" crap="1" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <metrics loc="28" ncloc="28" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/var/www/dima/untitled/app/FullNameHelper.php">
+        <class name="FullNameHelper" namespace="FormHelper">
+          <metrics methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="36" coveredelements="36"/>
+        </class>
+        <line num="19" type="method" name="set" crap="1" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="25" type="method" name="isCyrillic" crap="2" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="33" type="method" name="isLatin" crap="2" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="41" type="method" name="isText" crap="2" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="49" type="method" name="explodeName" crap="3" count="6"/>
+        <line num="51" type="stmt" count="6"/>
+        <line num="52" type="stmt" count="6"/>
+        <line num="54" type="stmt" count="6"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="4"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="3"/>
+        <line num="66" type="stmt" count="6"/>
+        <line num="69" type="method" name="getFirstName" crap="1" count="6"/>
+        <line num="71" type="stmt" count="6"/>
+        <line num="74" type="method" name="getSecondName" crap="1" count="3"/>
+        <line num="76" type="stmt" count="3"/>
+        <line num="79" type="method" name="getMiddleName" crap="1" count="3"/>
+        <line num="81" type="stmt" count="3"/>
+        <line num="84" type="method" name="get" crap="1" count="2"/>
+        <line num="86" type="stmt" count="2"/>
+        <metrics loc="87" ncloc="81" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="36" coveredelements="36"/>
+      </file>
+      <file name="/var/www/dima/untitled/app/PassportHelper.php">
+        <class name="PassportHelper" namespace="FormHelper">
+          <metrics methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="24" elements="32" coveredelements="30"/>
+        </class>
+        <line num="18" type="method" name="set" crap="1" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="29" type="method" name="setLanguage" crap="2.06" count="4"/>
+        <line num="31" type="stmt" count="4"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="4"/>
+        <line num="43" type="method" name="explodePassport" crap="10.02" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="46" type="stmt" count="4"/>
+        <line num="47" type="stmt" count="4"/>
+        <line num="49" type="stmt" count="4"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="3"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="3"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="66" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="3"/>
+        <line num="77" type="method" name="getPassSrc" crap="1" count="4"/>
+        <line num="79" type="stmt" count="4"/>
+        <line num="85" type="method" name="getPassNum" crap="1" count="2"/>
+        <line num="87" type="stmt" count="2"/>
+        <line num="93" type="method" name="get" crap="1" count="2"/>
+        <line num="95" type="stmt" count="2"/>
+        <metrics loc="96" ncloc="76" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="24" elements="32" coveredelements="28"/>
+      </file>
+      <file name="/var/www/dima/untitled/app/PhoneHelper.php">
+        <class name="PhoneHelper" namespace="FormHelper">
+          <metrics methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="19" coveredelements="17"/>
+        </class>
+        <line num="13" type="method" name="set" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <line num="23" type="method" name="removePhoneSpecifications" crap="1" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="35" type="method" name="formatPhoneLength" crap="3.10" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="54" type="method" name="get" crap="1" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <metrics loc="60" ncloc="46" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="19" coveredelements="16"/>
+      </file>
+    </package>
+    <metrics files="4" loc="271" ncloc="231" classes="4" methods="23" coveredmethods="20" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="68" elements="95" coveredelements="88"/>
+  </project>
+</coverage>
