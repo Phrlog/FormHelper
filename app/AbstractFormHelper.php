@@ -12,10 +12,10 @@ abstract class AbstractFormHelper
      * @param $data
      * @return $this
      */
-    public abstract function set($data);
+    abstract public function set($data);
 
     /**
      * @return mixed
      */
-    public abstract function get();
+    abstract public function get();
 }

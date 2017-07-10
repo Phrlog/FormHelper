@@ -53,22 +53,17 @@ class PassportHelper extends AbstractFormHelper
         $is_valid_ru = $this->language == 'ru' && $pass_length == 10 && $this->isInteger($this->passport);
         $is_valid_ua = $this->language == 'ua' && $pass_length == 8;
 
-        if (!($is_valid_ru || $is_valid_ua)) {
-            $this->passport = $this->pass_num = $this->pass_srs = false;
-            return $this;
-        }
-
         if ($is_valid_ru) {
             $this->pass_srs = mb_substr($this->passport, 0, 4);
             $this->pass_num = mb_substr($this->passport, 4, 6);
-        }
-
-        if ($is_valid_ua) {
+        } elseif ($is_valid_ua) {
             $this->pass_srs = mb_substr($this->passport, 0, 2);
             $this->pass_num = mb_substr($this->passport, 2, 6);
             if (!($this->isText($this->pass_srs) && $this->isInteger($this->pass_num))) {
                 $this->passport = $this->pass_num = $this->pass_srs = false;
             }
+        } else {
+            $this->passport = $this->pass_num = $this->pass_srs = false;
         }
 
         return $this;
