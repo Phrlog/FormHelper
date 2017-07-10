@@ -54,7 +54,7 @@ class PassportHelper extends AbstractFormHelper
         }
 
         if ($is_valid_ru) {
-            if (parent::isInteger($this->passport)) {
+            if ($this->isInteger($this->passport)) {
                 $this->pass_srs = mb_substr($this->passport, 0, 4);
                 $this->pass_num = mb_substr($this->passport, 4, 6);
             } else {
@@ -65,7 +65,7 @@ class PassportHelper extends AbstractFormHelper
         if ($is_valid_ua) {
             $this->pass_srs = mb_substr($this->passport, 0, 2);
             $this->pass_num = mb_substr($this->passport, 2, 6);
-            if (!(parent::isText($this->pass_srs) && parent::isInteger($this->pass_num))) {
+            if (!($this->isText($this->pass_srs) && $this->isInteger($this->pass_num))) {
                 $this->passport = $this->pass_num = $this->pass_srs = false;
             }
         }
