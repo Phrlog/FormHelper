@@ -1,7 +1,10 @@
 <?php
 namespace FormHelper;
 
-
+/**
+ * Class PhoneHelper
+ * @package FormHelper
+ */
 class PhoneHelper extends AbstractFormHelper
 {
     private $phone;
@@ -30,7 +33,7 @@ class PhoneHelper extends AbstractFormHelper
 
     /**
      * @param $length
-     * @return $this|bool
+     * @return $this
      */
     public function formatPhoneLength($length = 10)
     {
@@ -57,4 +60,3 @@ class PhoneHelper extends AbstractFormHelper
     }
 
 }
-

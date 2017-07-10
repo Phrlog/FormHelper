@@ -1,51 +1,65 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 07.07.17
- * Time: 14:59
- */
-
 namespace FormHelper;
 
-
+/**
+ * Class FullNameHelper
+ * @package FormHelper
+ */
 class FullNameHelper extends AbstractFormHelper
 {
+    use ValidationTrait;
+
     private $full_name;
     private $first;
     private $second;
     private $middle;
 
+    /**
+     * @param $full_name
+     * @return $this
+     */
     public function set($full_name)
     {
         $this->full_name = $full_name;
         return $this;
     }
 
-    public function isCyrillic($word = null)
+    /**
+     * @return $this
+     */
+    public function isCyrillic()
     {
-        if (!parent::isCyrillic($this->full_name)) {
+        if (!ValidationTrait::isCyrillic($this->full_name)) {
             $this->full_name = false;
         }
         return $this;
     }
 
-    public function isLatin($word = null)
+    /**
+     * @return $this
+     */
+    public function isLatin()
     {
-        if (!parent::isLatin($this->full_name)) {
+        if (!ValidationTrait::isLatin($this->full_name)) {
             $this->full_name = false;
         }
         return $this;
     }
 
-    public function isText($word = null)
+    /**
+     * @return $this
+     */
+    public function isText()
     {
-        if (!parent::isText($this->full_name)) {
+        if (!ValidationTrait::isText($this->full_name)) {
             $this->full_name = false;
         }
         return $this;
     }
 
+    /**
+     * @return $this
+     */
     public function explodeName()
     {
         $name = explode(' ', $this->full_name);
@@ -66,21 +80,33 @@ class FullNameHelper extends AbstractFormHelper
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getFirstName()
     {
         return $this->first;
     }
 
+    /**
+     * @return string
+     */
     public function getSecondName()
     {
         return $this->second;
     }
 
+    /**
+     * @return string
+     */
     public function getMiddleName()
     {
         return $this->middle;
     }
 
+    /**
+     * @return array
+     */
     public function get()
     {
         return ['first' => $this->first, 'second' => $this->second, 'middle' => $this->middle];

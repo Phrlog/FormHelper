@@ -2,9 +2,14 @@
 
 namespace FormHelper;
 
-
+/**
+ * Class PassportHelper
+ * @package FormHelper
+ */
 class PassportHelper extends AbstractFormHelper
 {
+    use ValidationTrait;
+
     public $passport;
     public $language;
 
@@ -45,7 +50,7 @@ class PassportHelper extends AbstractFormHelper
         mb_internal_encoding("UTF-8");
 
         $pass_length = mb_strlen($this->passport);
-        $is_valid_ru = $this->language == 'ru' && $pass_length == 10;
+        $is_valid_ru = $this->language == 'ru' && $pass_length == 10 && $this->isInteger($this->passport);
         $is_valid_ua = $this->language == 'ua' && $pass_length == 8;
 
         if (!($is_valid_ru || $is_valid_ua)) {
@@ -54,12 +59,8 @@ class PassportHelper extends AbstractFormHelper
         }
 
         if ($is_valid_ru) {
-            if ($this->isInteger($this->passport)) {
-                $this->pass_srs = mb_substr($this->passport, 0, 4);
-                $this->pass_num = mb_substr($this->passport, 4, 6);
-            } else {
-                $this->passport = $this->pass_num = $this->pass_srs = false;
-            }
+            $this->pass_srs = mb_substr($this->passport, 0, 4);
+            $this->pass_num = mb_substr($this->passport, 4, 6);
         }
 
         if ($is_valid_ua) {
