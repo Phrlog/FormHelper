@@ -42,6 +42,8 @@ class PassportHelper extends AbstractFormHelper
      */
     public function explodePassport()
     {
+        mb_internal_encoding("UTF-8");
+
         $pass_length = mb_strlen($this->passport);
         $is_valid_ru = $this->language == 'ru' && $pass_length == 10;
         $is_valid_ua = $this->language == 'ua' && $pass_length == 8;
