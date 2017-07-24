@@ -59,4 +59,15 @@ class PhoneTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    public function testErrorPhone()
+    {
+        $phone = '380-462-61';
+        $this->assertFalse(
+            $this->helper->set($phone)
+                ->removePhoneSpecifications()
+                ->formatPhoneLength(12)
+                ->get()
+        );
+    }
+
 }
