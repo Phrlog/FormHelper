@@ -40,15 +40,13 @@ class PhoneHelper extends AbstractFormHelper
         $phone_length = strlen($this->phone);
         $phone_diff = $phone_length - $length;
 
-        if ($phone_diff == 0) {
-            return $this;
-        } elseif($phone_diff == 1) {
+        if ($phone_diff == 1) {
             $this->phone = mb_substr($this->phone, 1);
-            return $this;
-        } else {
+        } elseif ($phone_diff !== 0) {
             $this->phone = false;
-            return $this;
         }
+
+        return $this;
     }
 
     /**
