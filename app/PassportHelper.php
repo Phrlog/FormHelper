@@ -54,27 +54,33 @@ class PassportHelper extends AbstractFormHelper
         $is_valid_ua = $this->language == 'ua' && $pass_length == 8;
 
         if ($is_valid_ru) {
-            $this->explodeRuPassport();
+            return $this->explodeRuPassport();
         } elseif ($is_valid_ua) {
-            $this->explodeUaPassport();
-        } else {
-            $this->passport = $this->pass_num = $this->pass_srs = false;
+            return $this->explodeUaPassport();
         }
+
+        $this->passport = $this->pass_num = $this->pass_srs = false;
 
         return $this;
     }
 
     /**
      * Explode ru passport
+     *
+     * @return $this
      */
     protected function explodeRuPassport()
     {
         $this->pass_srs = mb_substr($this->passport, 0, 4);
         $this->pass_num = mb_substr($this->passport, 4, 6);
+
+        return $this;
     }
 
     /**
-     *  Explode ua passport
+     * Explode ua passport
+     *
+     * @return $this
      */
     protected function explodeUaPassport()
     {
@@ -83,6 +89,8 @@ class PassportHelper extends AbstractFormHelper
         if (!($this->isText($this->pass_srs) && $this->isInteger($this->pass_num))) {
             $this->passport = $this->pass_num = $this->pass_srs = false;
         }
+
+        return $this;
     }
 
     /**
