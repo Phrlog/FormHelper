@@ -98,4 +98,17 @@ class PassportTest extends \PHPUnit_Framework_TestCase
                 ->getPassSrc()
         );
     }
+
+    public function testLanguagePassportError()
+    {
+        $passport = 'А1654321';
+
+        $this->assertFalse(
+            $this->helper->set($passport)
+                ->setLanguage('kz')
+                ->explodePassport()
+                ->getPassSrc()
+        );
+    }
+
 }
