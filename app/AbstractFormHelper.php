@@ -1,6 +1,6 @@
 <?php
 
-namespace FormHelper;
+namespace phrlog\FormHelper;
 
 /**
  * Class AbstractFormHelper

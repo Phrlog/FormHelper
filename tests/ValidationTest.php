@@ -1,8 +1,8 @@
 <?php
 
-namespace FormHelper\tests;
+namespace phrlog\FormHelper\tests;
 
-use FormHelper\ValidationTrait;
+use phrlog\FormHelper\ValidationTrait;
 
 /**
  * Class ValidationTest

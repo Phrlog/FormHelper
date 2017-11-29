@@ -1,5 +1,5 @@
 <?php
-namespace FormHelper;
+namespace phrlog\FormHelper;
 
 /**
  * Class ValidationTrait

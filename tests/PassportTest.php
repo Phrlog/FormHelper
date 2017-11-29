@@ -1,8 +1,8 @@
 <?php
 
-namespace FormHelper\tests;
+namespace phrlog\FormHelper\tests;
 
-use FormHelper\PassportHelper;
+use phrlog\FormHelper\PassportHelper;
 
 
 /**

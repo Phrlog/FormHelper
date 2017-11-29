@@ -1,8 +1,8 @@
 <?php
 
-namespace FormHelper\tests;
+namespace phrlog\FormHelper\tests;
 
-use FormHelper\PhoneHelper;
+use phrlog\FormHelper\PhoneHelper;
 
 
 /**
